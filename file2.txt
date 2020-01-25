@@ -1,2 +1,22 @@
 good bye
 some other line
+newline
+ первую очередь все файлы делятся на отслеживаемые (tracked) и неотслеживаемые (untracked). Untracked – это новый файл, который не был добавлен для отслеживания командой git add. Все остальные файлы являются tracked.
+
+lasso$ touch .editorconfig
+lasso$ git status
+
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files: # Тут не отслеживается
+
+    .editorconfig
+
+lasso$ git add .editorconfig
+lasso$ git status
+
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed: # Тут отслеживается
+
+    new file:   .editorconfig
